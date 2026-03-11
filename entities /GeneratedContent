@@ -1,0 +1,50 @@
+{
+  "name": "GeneratedContent",
+  "type": "object",
+  "properties": {
+    "topic": {
+      "type": "string",
+      "description": "The topic or product the content is about"
+    },
+    "content_type": {
+      "type": "string",
+      "enum": [
+        "banner",
+        "video_script",
+        "pamphlet",
+        "social_content"
+      ],
+      "description": "Type of marketing content generated"
+    },
+    "title": {
+      "type": "string",
+      "description": "Generated title for the content"
+    },
+    "output_url": {
+      "type": "string",
+      "description": "URL of the generated file (image, etc.)"
+    },
+    "text_content": {
+      "type": "string",
+      "description": "Generated text content (for scripts, pamphlets, etc.)"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "generating",
+        "completed",
+        "failed"
+      ],
+      "default": "generating",
+      "description": "Current status of the generation"
+    },
+    "metadata": {
+      "type": "object",
+      "description": "Additional metadata about the generated content"
+    }
+  },
+  "required": [
+    "topic",
+    "content_type"
+  ]
+}
